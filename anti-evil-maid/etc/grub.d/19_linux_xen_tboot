@@ -150,6 +150,9 @@ EOF
 	module	/${sinit_module}
 EOF
     done
+  else
+      message="$(gettext_printf "Missing SINIT module!")"
+      echo	'$message'
   fi
   sed "s/^/$submenu_indentation/" << EOF
 }
